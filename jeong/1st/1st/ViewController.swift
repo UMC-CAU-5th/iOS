@@ -28,13 +28,6 @@ class ViewController: UIViewController {
         
         makeConst()
         
-        for i in 0...7 {
-                   if let image = UIImage(named: "photo\(i)") {
-                       let name = list[i]
-                       let item = Item(image: image, name: name)
-                       items.append(item)
-                   }
-               }
     }
     
     //해결 완료
@@ -62,12 +55,18 @@ class ViewController: UIViewController {
     private lazy var collection : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
-        layout.minimumInteritemSpacing = 3
-        layout.minimumLineSpacing = 3
+        layout.minimumInteritemSpacing = 4
+        layout.minimumLineSpacing = 4
+        layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         
+
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collection.backgroundColor = .clear
+        collection.layer.borderColor = UIColor.black.cgColor
+        collection.layer.borderWidth = 1
+        collection.layer.cornerRadius = 16
         
+        collection.collectionViewLayout = layout
         collection.register(SortCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
         
         return collection
@@ -98,7 +97,7 @@ class ViewController: UIViewController {
       }()
       
       func makeConst(){
-          [topView, firstAdvertisement, deliveryStack, bottomView, bottomCouponView].forEach{ self.view.addSubview($0) }
+          [topView, firstAdvertisement, deliveryStack, collection, bottomCouponView].forEach{ self.view.addSubview($0) }
           
           topView.snp.makeConstraints { (make) -> Void in
               make.top.left.right.equalToSuperview()
@@ -117,20 +116,19 @@ class ViewController: UIViewController {
               make.right.equalTo(self.view.safeAreaLayoutGuide).offset(-15)
           }
           
-          bottomView.snp.makeConstraints{ (make) -> Void in
+          collection.snp.makeConstraints{ (make) -> Void in
               make.top.equalTo(deliveryStack.snp.bottom).offset(15)
               make.left.equalTo(self.view.safeAreaLayoutGuide).offset(15)
               make.right.equalTo(self.view.safeAreaLayoutGuide).offset(-15)
               make.height.equalTo(200)
           }
           
-      //    bottomView.addSubview(collection)
        
           bottomCouponView.snp.makeConstraints{ (make) -> Void in
               make.centerX.equalToSuperview()
               make.height.lessThanOrEqualTo(100)
               make.left.equalTo(self.view.safeAreaLayoutGuide).offset(15)
-              make.top.equalTo(bottomView.snp.bottom).offset(15)
+              make.top.equalTo(collection.snp.bottom).offset(15)
           }
         
           
@@ -140,21 +138,35 @@ class ViewController: UIViewController {
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return items.count
+        return 8
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SortCollectionViewCell
-
-        if indexPath.item < items.count {
-            
-            let item = items[indexPath.item]
-            cell.configuration(image: item.image, name: item.name)
-        } else {
-            
-            cell.configuration(image: nil, name: "Invalid Item")
-        }
-
+        
+        cell.configuration(name: list[indexPath.item])
+        
+        
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: 20)
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        
+        return CGSize(width: collectionView.frame.width, height: 10)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 40
+    }
+
+    
 }
