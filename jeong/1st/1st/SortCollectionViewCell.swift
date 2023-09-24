@@ -36,23 +36,22 @@ class SortCollectionViewCell: UICollectionViewCell {
     func setSelf(){
         self.layer.cornerRadius = layer.frame.width/2 + 1
         self.backgroundColor = UIColor.gray
+
         
         [imageView, nameLabel].forEach{ self.addSubview($0) }
         
         imageView.snp.makeConstraints{ (make) -> Void in
-            make.centerX.equalToSuperview()
-            make.top.equalToSuperview().offset(5)
+            make.top.equalToSuperview().offset(10)
             make.width.height.equalTo(30)
         }
         
         nameLabel.snp.makeConstraints{ (make) -> Void in
             make.centerX.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom).offset(5)
+            make.top.equalTo(imageView.snp.bottom).offset(20)
         }
     }
     
-    func configuration(image: UIImage?, name: String){
-        imageView.image = image
+    func configuration(name: String){
         nameLabel.text = name
     }
     
