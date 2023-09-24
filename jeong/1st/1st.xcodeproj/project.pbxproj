@@ -12,6 +12,8 @@
 		482D80E12ABF392500DE6184 /* voucher.png in Resources */ = {isa = PBXBuildFile; fileRef = 482D80E02ABF392500DE6184 /* voucher.png */; };
 		482D80E32ABF3C4400DE6184 /* TopAdvertiseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D80E22ABF3C4400DE6184 /* TopAdvertiseView.swift */; };
 		482D80E72ABF463500DE6184 /* DeliveryStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 482D80E62ABF463500DE6184 /* DeliveryStackView.swift */; };
+		487999392ABFAC0A00489F9A /* SortCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487999382ABFAC0A00489F9A /* SortCollectionViewCell.swift */; };
+		4879993B2ABFB60D00489F9A /* adver.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 4879993A2ABFB60D00489F9A /* adver.jpeg */; };
 		489435E42ABEF279001F1728 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489435E32ABEF279001F1728 /* AppDelegate.swift */; };
 		489435E62ABEF279001F1728 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489435E52ABEF279001F1728 /* SceneDelegate.swift */; };
 		489435E82ABEF279001F1728 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489435E72ABEF279001F1728 /* ViewController.swift */; };
@@ -27,6 +29,8 @@
 		482D80E02ABF392500DE6184 /* voucher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = voucher.png; sourceTree = "<group>"; };
 		482D80E22ABF3C4400DE6184 /* TopAdvertiseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopAdvertiseView.swift; sourceTree = "<group>"; };
 		482D80E62ABF463500DE6184 /* DeliveryStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryStackView.swift; sourceTree = "<group>"; };
+		487999382ABFAC0A00489F9A /* SortCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortCollectionViewCell.swift; sourceTree = "<group>"; };
+		4879993A2ABFB60D00489F9A /* adver.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = adver.jpeg; sourceTree = "<group>"; };
 		489435E02ABEF279001F1728 /* 1st.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 1st.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		489435E32ABEF279001F1728 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		489435E52ABEF279001F1728 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				482D80E02ABF392500DE6184 /* voucher.png */,
+				4879993A2ABFB60D00489F9A /* adver.jpeg */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -83,6 +88,7 @@
 				482D80DD2ABF1E4100DE6184 /* TopUIView.swift */,
 				482D80E22ABF3C4400DE6184 /* TopAdvertiseView.swift */,
 				482D80E62ABF463500DE6184 /* DeliveryStackView.swift */,
+				487999382ABFAC0A00489F9A /* SortCollectionViewCell.swift */,
 				482D80DB2ABF1CAA00DE6184 /* CouponBtn.swift */,
 				489435EF2ABEF279001F1728 /* Assets.xcassets */,
 				489435F12ABEF279001F1728 /* LaunchScreen.storyboard */,
@@ -156,6 +162,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4879993B2ABFB60D00489F9A /* adver.jpeg in Resources */,
 				489435F32ABEF279001F1728 /* LaunchScreen.storyboard in Resources */,
 				482D80E12ABF392500DE6184 /* voucher.png in Resources */,
 				489435F02ABEF279001F1728 /* Assets.xcassets in Resources */,
@@ -174,6 +181,7 @@
 				482D80E32ABF3C4400DE6184 /* TopAdvertiseView.swift in Sources */,
 				489435EE2ABEF279001F1728 /* _st.xcdatamodeld in Sources */,
 				489435E62ABEF279001F1728 /* SceneDelegate.swift in Sources */,
+				487999392ABFAC0A00489F9A /* SortCollectionViewCell.swift in Sources */,
 				482D80DE2ABF1E4100DE6184 /* TopUIView.swift in Sources */,
 				482D80DC2ABF1CAA00DE6184 /* CouponBtn.swift in Sources */,
 				482D80E72ABF463500DE6184 /* DeliveryStackView.swift in Sources */,
