@@ -47,7 +47,7 @@ class SortCollectionViewCell: UICollectionViewCell {
         
         nameLabel.snp.makeConstraints{ (make) -> Void in
             make.centerX.equalToSuperview()
-            make.top.equalTo(imageView.snp.bottom).offset(20)
+            make.top.equalTo(imageView.snp.bottom).offset(15)
         }
     }
     
