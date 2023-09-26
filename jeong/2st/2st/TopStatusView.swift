@@ -24,7 +24,7 @@ class TopStatusView: UIView {
         let btn = UIButton()
         
         var attString = AttributedString("조원동")
-        attString.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+        attString.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         attString.foregroundColor = UIColor.black
         
         var btnImage = UIImage(systemName: "chevron.down")?.withTintColor(UIColor.black, renderingMode: .alwaysOriginal)
@@ -91,18 +91,18 @@ class TopStatusView: UIView {
         }
         
         rightThreeBtn.snp.makeConstraints{ (make) -> Void in
-            make.right.equalTo(self.safeAreaLayoutGuide).offset(-4)
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(2)
+            make.right.equalTo(self.safeAreaLayoutGuide).offset(-3)
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(5)
         }
         
         rightTwoBtn.snp.makeConstraints{ (make) -> Void in
-            make.right.equalTo(rightThreeBtn.snp.left).offset(-4)
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(2)
+            make.right.equalTo(rightThreeBtn.snp.left).offset(-3)
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(5)
         }
         
         rightOneBtn.snp.makeConstraints{ (make) -> Void in
-            make.right.equalTo(rightTwoBtn.snp.left).offset(-4)
-            make.top.equalTo(self.safeAreaLayoutGuide).offset(2)
+            make.right.equalTo(rightTwoBtn.snp.left).offset(-3)
+            make.top.equalTo(self.safeAreaLayoutGuide).offset(5)
         }
         
         self.snp.makeConstraints{ (make) -> Void in
