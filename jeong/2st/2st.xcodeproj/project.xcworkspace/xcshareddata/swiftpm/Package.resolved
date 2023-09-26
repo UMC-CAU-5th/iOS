@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "jjfloatingactionbutton",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jjochen/JJFloatingActionButton",
+      "state" : {
+        "revision" : "60fcde6d01aa33598753214b9438c192f2074900",
+        "version" : "2.5.0"
+      }
+    },
+    {
       "identity" : "snapkit",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SnapKit/SnapKit",

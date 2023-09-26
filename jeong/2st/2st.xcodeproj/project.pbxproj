@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4828BAD52AC307EB00C63B6F /* JJFloatingActionButton in Frameworks */ = {isa = PBXBuildFile; productRef = 4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */; };
 		488445FF2AC15F040002833E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488445FE2AC15F040002833E /* AppDelegate.swift */; };
 		488446012AC15F040002833E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488446002AC15F040002833E /* SceneDelegate.swift */; };
 		488446032AC15F040002833E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488446022AC15F040002833E /* ViewController.swift */; };
@@ -16,6 +17,17 @@
 		48C58A852AC2EF9B009DE9E3 /* TopStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C58A842AC2EF9B009DE9E3 /* TopStatusView.swift */; };
 		48C58A882AC2EFB5009DE9E3 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48C58A872AC2EFB5009DE9E3 /* SnapKit */; };
 		48C58A8C2AC2FC2C009DE9E3 /* BottomTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48C58A8B2AC2FC2C009DE9E3 /* BottomTabBar.swift */; };
+		48CD549F2AC33573003A16F2 /* CenterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48CD549E2AC33573003A16F2 /* CenterTableViewCell.swift */; };
+		48CD54AB2AC346BB003A16F2 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A12AC346BB003A16F2 /* 4.png */; };
+		48CD54AC2AC346BB003A16F2 /* 7.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A22AC346BB003A16F2 /* 7.png */; };
+		48CD54AD2AC346BB003A16F2 /* 8.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A32AC346BB003A16F2 /* 8.png */; };
+		48CD54AE2AC346BB003A16F2 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A42AC346BB003A16F2 /* 1.png */; };
+		48CD54AF2AC346BB003A16F2 /* 9.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A52AC346BB003A16F2 /* 9.png */; };
+		48CD54B02AC346BB003A16F2 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A62AC346BB003A16F2 /* 2.png */; };
+		48CD54B12AC346BB003A16F2 /* 10.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A72AC346BB003A16F2 /* 10.png */; };
+		48CD54B22AC346BB003A16F2 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A82AC346BB003A16F2 /* 3.png */; };
+		48CD54B32AC346BB003A16F2 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A92AC346BB003A16F2 /* 5.png */; };
+		48CD54B42AC346BB003A16F2 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54AA2AC346BB003A16F2 /* 6.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +41,17 @@
 		4884460F2AC15F060002833E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48C58A842AC2EF9B009DE9E3 /* TopStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopStatusView.swift; sourceTree = "<group>"; };
 		48C58A8B2AC2FC2C009DE9E3 /* BottomTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabBar.swift; sourceTree = "<group>"; };
+		48CD549E2AC33573003A16F2 /* CenterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenterTableViewCell.swift; sourceTree = "<group>"; };
+		48CD54A12AC346BB003A16F2 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		48CD54A22AC346BB003A16F2 /* 7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 7.png; sourceTree = "<group>"; };
+		48CD54A32AC346BB003A16F2 /* 8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 8.png; sourceTree = "<group>"; };
+		48CD54A42AC346BB003A16F2 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		48CD54A52AC346BB003A16F2 /* 9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 9.png; sourceTree = "<group>"; };
+		48CD54A62AC346BB003A16F2 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		48CD54A72AC346BB003A16F2 /* 10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 10.png; sourceTree = "<group>"; };
+		48CD54A82AC346BB003A16F2 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		48CD54A92AC346BB003A16F2 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		48CD54AA2AC346BB003A16F2 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4828BAD52AC307EB00C63B6F /* JJFloatingActionButton in Frameworks */,
 				48C58A882AC2EFB5009DE9E3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,17 +86,36 @@
 		488445FD2AC15F040002833E /* 2st */ = {
 			isa = PBXGroup;
 			children = (
+				48CD54A02AC346A9003A16F2 /* Image */,
 				488445FE2AC15F040002833E /* AppDelegate.swift */,
 				488446002AC15F040002833E /* SceneDelegate.swift */,
 				488446022AC15F040002833E /* ViewController.swift */,
 				48C58A842AC2EF9B009DE9E3 /* TopStatusView.swift */,
 				48C58A8B2AC2FC2C009DE9E3 /* BottomTabBar.swift */,
+				48CD549E2AC33573003A16F2 /* CenterTableViewCell.swift */,
 				4884460A2AC15F060002833E /* Assets.xcassets */,
 				4884460C2AC15F060002833E /* LaunchScreen.storyboard */,
 				4884460F2AC15F060002833E /* Info.plist */,
 				488446072AC15F040002833E /* _st.xcdatamodeld */,
 			);
 			path = 2st;
+			sourceTree = "<group>";
+		};
+		48CD54A02AC346A9003A16F2 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				48CD54A42AC346BB003A16F2 /* 1.png */,
+				48CD54A62AC346BB003A16F2 /* 2.png */,
+				48CD54A82AC346BB003A16F2 /* 3.png */,
+				48CD54A12AC346BB003A16F2 /* 4.png */,
+				48CD54A92AC346BB003A16F2 /* 5.png */,
+				48CD54AA2AC346BB003A16F2 /* 6.png */,
+				48CD54A22AC346BB003A16F2 /* 7.png */,
+				48CD54A32AC346BB003A16F2 /* 8.png */,
+				48CD54A52AC346BB003A16F2 /* 9.png */,
+				48CD54A72AC346BB003A16F2 /* 10.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -93,6 +136,7 @@
 			name = 2st;
 			packageProductDependencies = (
 				48C58A872AC2EFB5009DE9E3 /* SnapKit */,
+				4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */,
 			);
 			productName = 2st;
 			productReference = 488445FB2AC15F040002833E /* 2st.app */;
@@ -124,6 +168,7 @@
 			mainGroup = 488445F22AC15F040002833E;
 			packageReferences = (
 				48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */,
 			);
 			productRefGroup = 488445FC2AC15F040002833E /* Products */;
 			projectDirPath = "";
@@ -139,6 +184,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD54B12AC346BB003A16F2 /* 10.png in Resources */,
+				48CD54AE2AC346BB003A16F2 /* 1.png in Resources */,
+				48CD54B02AC346BB003A16F2 /* 2.png in Resources */,
+				48CD54B22AC346BB003A16F2 /* 3.png in Resources */,
+				48CD54AC2AC346BB003A16F2 /* 7.png in Resources */,
+				48CD54AB2AC346BB003A16F2 /* 4.png in Resources */,
+				48CD54AF2AC346BB003A16F2 /* 9.png in Resources */,
+				48CD54AD2AC346BB003A16F2 /* 8.png in Resources */,
+				48CD54B32AC346BB003A16F2 /* 5.png in Resources */,
+				48CD54B42AC346BB003A16F2 /* 6.png in Resources */,
 				4884460E2AC15F060002833E /* LaunchScreen.storyboard in Resources */,
 				4884460B2AC15F060002833E /* Assets.xcassets in Resources */,
 			);
@@ -151,6 +206,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48CD549F2AC33573003A16F2 /* CenterTableViewCell.swift in Sources */,
 				48C58A8C2AC2FC2C009DE9E3 /* BottomTabBar.swift in Sources */,
 				48C58A852AC2EF9B009DE9E3 /* TopStatusView.swift in Sources */,
 				488446032AC15F040002833E /* ViewController.swift in Sources */,
@@ -364,6 +420,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jjochen/JJFloatingActionButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -375,6 +439,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */;
+			productName = JJFloatingActionButton;
+		};
 		48C58A872AC2EFB5009DE9E3 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */;
