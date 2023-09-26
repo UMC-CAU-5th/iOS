@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SnapKit
 
 class BottomTabBar: UITabBar {
 
@@ -30,6 +31,6 @@ class BottomTabBar: UITabBar {
         item4.badgeValue = "4"
         
         self.items = [item1, item2, item3, item4, item5]
+        
     }
-
 }
