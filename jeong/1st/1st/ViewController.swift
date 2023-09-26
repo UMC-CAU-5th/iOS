@@ -30,13 +30,13 @@ class ViewController: UIViewController {
         
     }
     
-    //해결 완료
+
     private lazy var topView : TopUIView = {
         let view = TopUIView()
         return view
     }()
     
-    //해결 완료
+
     private lazy var firstAdvertisement : TopAdvertiseView = {
         let first = TopAdvertiseView()
         first.layer.borderColor = UIColor.black.cgColor
@@ -45,13 +45,11 @@ class ViewController: UIViewController {
         return first
     }()
 
-    //해결 완료
     private lazy var deliveryStack : DeliveryStackView = {
         let dstack = DeliveryStackView()
         return dstack
     }()
     
-    // 흠 왜 안뜨지,,
     private lazy var collection : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .vertical
