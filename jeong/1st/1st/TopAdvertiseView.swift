@@ -21,7 +21,7 @@ class TopAdvertiseView: UIView {
     
     private lazy var titleText : UILabel = {
         let text = UILabel()
-        text.text = "집콕러세요? 30% 쿠폰 드려요!"
+        text.text = "집콕러세요? 30% 쿠폰 드려요!!!"
         
         let attributeString = NSMutableAttributedString(string: text.text ?? "")
         let font = UIFont.systemFont(ofSize: 15, weight: .bold)
