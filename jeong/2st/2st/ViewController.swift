@@ -7,6 +7,7 @@
 
 import UIKit
 import SnapKit
+import JJFloatingActionButton
 
 class ViewController: UIViewController{
     
@@ -16,6 +17,8 @@ class ViewController: UIViewController{
                                 "갤럭시로 갈아탈라고 올림 아이폰 안씀"]
     var subText : [String] = ["조원동", "흑석동", "영통", "청라", "제주도", "지구 어딘가", "아 귀찮아", "어 그냥 어딘가 삼", "라스베이거스", "동굴속"]
     var price : [String] = ["10,000,000원", "20,000원", "25,000원", "123,123,123,123원", "0원", "460,000원", "135,000원", "210,000원","123원","131,000,000,000원"]
+    
+    var touch : Bool = false
     
 
     override func viewDidLoad() {
@@ -72,11 +75,62 @@ class ViewController: UIViewController{
             self.tableView.reloadData()
         }
     }
-
+    
+    private lazy var actionBtn : JJFloatingActionButton = {
+        let btn = JJFloatingActionButton()
+    
+        btn.buttonImage = UIImage(systemName: "plus")
+        btn.buttonColor = UIColor.orange
+        btn.buttonDiameter = 60
+        btn.buttonImageSize = CGSize(width: 30, height: 30)
+        
+        btn.layer.shadowColor = UIColor.gray.cgColor
+        btn.layer.shadowOffset = CGSize(width: 0, height: 1)
+        btn.layer.shadowOpacity = 0.4
+        btn.layer.shadowRadius = 2
+        btn.itemAnimationConfiguration = .slideIn(withInterItemSpacing: 10)
+        
+        btn.configureDefaultItem{ item in
+            item.titlePosition = .leading
+            item.titleLabel.textColor = .black
+            item.titleLabel.backgroundColor = .white
+            item.titleLabel.textAlignment = .center
+            item.titleLabel.layer.cornerRadius = 5
+            item.titleLabel.layer.masksToBounds = true
+            item.titleLabel.snp.makeConstraints{ (make) -> Void in
+                make.width.greaterThanOrEqualTo(70)
+                make.width.greaterThanOrEqualTo(20)
+            }
+            item.titleLabel.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+            item.buttonImageColor = .orange
+        }
+        
+        btn.addItem(title: "부동산", image: UIImage(systemName: "house.and.flag")?.withTintColor(UIColor.orange, renderingMode: .alwaysOriginal))
+        btn.addItem(title: "중고차", image: UIImage(systemName: "car.fill")?.withTintColor(UIColor.orange, renderingMode: .alwaysOriginal))
+        btn.addItem(title: "농수산물", image: UIImage(systemName: "camera.macro.circle")?.withTintColor(UIColor.orange, renderingMode: .alwaysOriginal))
+        btn.addItem(title: "과외", image: UIImage(systemName: "book.fill")?.withTintColor(UIColor.orange, renderingMode: .alwaysOriginal))
+        
+        btn.addTarget(self, action: #selector(handleButtonTouchUp), for: .touchUpInside)
+        
+        return btn
+                                                    
+    }()
+    
+    @objc private func handleButtonTouchUp(){
+        if touch == false{
+            actionBtn.buttonColor = .white
+            actionBtn.buttonImageColor = .black
+            touch = true
+        }
+        else{
+            actionBtn.buttonColor = .orange
+            actionBtn.buttonImageColor = .white
+            touch = false
+        }
+    }
     
     private func makeConstraints(){
-        [topView, tableView ,bottomTabBar].forEach{ self.view.addSubview($0) }
-        
+        [topView, tableView ,bottomTabBar, actionBtn].forEach{ self.view.addSubview($0) }
         
         topView.snp.makeConstraints{ (make) -> Void in
             make.top.equalToSuperview()
@@ -97,6 +151,11 @@ class ViewController: UIViewController{
             make.right.equalToSuperview()
             make.bottom.equalToSuperview()
         }
+        
+        actionBtn.snp.makeConstraints{ (make) -> Void in
+            make.right.equalTo(self.view.safeAreaLayoutGuide).offset(-20)
+            make.bottom.equalTo(bottomTabBar.snp.top).offset(-20)
+        }
     }
 }
 
@@ -116,5 +175,4 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
         return 130
     }
 }
-
 
