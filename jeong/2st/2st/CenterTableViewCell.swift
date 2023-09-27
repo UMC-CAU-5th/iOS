@@ -33,7 +33,6 @@ class CenterTableViewCell: UITableViewCell {
         let image = UIImageView()
         image.contentMode = .scaleToFill
         image.layer.cornerRadius = 10
-        image.layer.borderWidth = 1
         image.layer.borderColor = UIColor.black.cgColor
         image.layer.masksToBounds = true
         
@@ -70,12 +69,13 @@ class CenterTableViewCell: UITableViewCell {
             make.left.equalTo(self.safeAreaLayoutGuide).offset(12)
             make.top.equalTo(self.safeAreaLayoutGuide).offset(12)
             make.bottom.equalTo(self.safeAreaLayoutGuide).offset(-12)
-            make.width.lessThanOrEqualTo(100)
+            make.width.lessThanOrEqualTo(105)
         }
         
         titleText.snp.makeConstraints{ (make) -> Void in
             make.top.equalTo(self.safeAreaLayoutGuide).offset(12)
             make.left.equalTo(tableImage.snp.right).offset(12)
+            make.right.equalTo(self.safeAreaLayoutGuide).offset(-40)
         }
         
         subTitleText.snp.makeConstraints{ (make) -> Void in
