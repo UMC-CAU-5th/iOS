@@ -24,6 +24,7 @@ class ViewController: UIViewController{
         makeConstraints()
         
     }
+    
     private func save(){
         for i in 1...10 {
             if let image = UIImage(named: "\(i).png") {
@@ -59,8 +60,18 @@ class ViewController: UIViewController{
         table.register(CenterTableViewCell.self, forCellReuseIdentifier: CenterTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
+        table.refreshControl = UIRefreshControl()
+        table.refreshControl?.tintColor = UIColor.orange
+        table.refreshControl?.addTarget(self, action: #selector(didPullRefresh), for: .valueChanged)
         return table
     }()
+    
+    @objc private func didPullRefresh(){
+        DispatchQueue.main.asyncAfter(deadline: .now()+1) {
+            self.tableView.refreshControl?.endRefreshing()
+            self.tableView.reloadData()
+        }
+    }
 
     
     private func makeConstraints(){
@@ -102,7 +113,7 @@ extension ViewController : UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return 130
     }
 }
 
