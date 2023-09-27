@@ -29,6 +29,14 @@ class CenterTableViewCell: UITableViewCell {
         fatalError("error")
     }
     
+    private lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.register(CenterCollectionViewCell.self, forCellWithReuseIdentifier: CenterCollectionViewCell.identifier)
+        return collection
+    }()
+    
     private lazy var tableImage : UIImageView = {
         let image = UIImageView()
         image.contentMode = .scaleToFill
@@ -88,15 +96,17 @@ class CenterTableViewCell: UITableViewCell {
             make.left.equalTo(tableImage.snp.right).offset(12)
         }
         
+        collectionView.snp.makeConstraints{ (make) -> Void in
+            
+        }
     }
-
 }
 
 extension CenterTableViewCell {
-    public func configuration(leftImage : UIImage, titleTxt : String, subTxt : String, priceTxt : String) {
-        tableImage.image = leftImage
-        titleText.text = titleTxt
-        subTitleText.text = subTxt
-        price.text = priceTxt
+    public func configuration(_ model : Item) {
+        tableImage.image = model.image
+        titleText.text = model.title
+        subTitleText.text = model.subtitle
+        price.text = model.price
     }
 }
