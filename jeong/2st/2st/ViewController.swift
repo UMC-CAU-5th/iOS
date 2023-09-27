@@ -10,31 +10,28 @@ import SnapKit
 import JJFloatingActionButton
 
 class ViewController: UIViewController{
-    
-    var saveImage : [UIImage] = []
-    var TitleText : [String] = ["류현진 홈런 볼 팔아요", "계란후라이 할 때 쓰던 팬 팔아요", "캐논이 아닌 디카 팜 -> 헐값", "발냄새 좀 오지게 나는데 팔아요!!",
-                                "라면국물 묻은 하얀색 가방 가질분?", "우리집 강아지 자랑임 ㅋ","이건 모냐 조선에서 온 물건인가??" ,"명절인데 화투 안 하시게요??", "몰라요 엄청난 거 같아서 올려봐욤",
-                                "갤럭시로 갈아탈라고 올림 아이폰 안씀"]
-    var subText : [String] = ["조원동", "흑석동", "영통", "청라", "제주도", "지구 어딘가", "아 귀찮아", "어 그냥 어딘가 삼", "라스베이거스", "동굴속"]
-    var price : [String] = ["10,000,000원", "20,000원", "25,000원", "123,123,123,123원", "0원", "460,000원", "135,000원", "210,000원","123원","131,000,000,000원"]
-    
-    var touch : Bool = false
-    
 
+    var touch : Bool = false
+    var items: [Item] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        save()
+        loadData()
         makeConstraints()
-        
     }
     
-    private func save(){
-        for i in 1...10 {
-            if let image = UIImage(named: "\(i).png") {
-                saveImage.append(image)
-            } else {
-                print("이미지 \(i).png를 로드할 수 없습니다.")
-            }
+    private func loadData(){
+        let imagesNames = ["1.png", "2.png", "3.png", "4.png", "5.png","6.png","7.png","8.png","9.png","10.png"]
+        let images = imagesNames.compactMap{ UIImage(named:  $0) }
+        let titles: [String] = ["류현진 홈런 볼 팔아요", "계란후라이 할 때 쓰던 팬 팔아요", "캐논이 아닌 디카 팜 -> 헐값", "발냄새 좀 오지게 나는데 팔아요!!",
+                                "라면국물 묻은 하얀색 가방 가질분?", "우리집 강아지 자랑임 ㅋ","이건 모냐 조선에서 온 물건인가??" ,"명절인데 화투 안 하시게요??", "몰라요 엄청난 거 같아서 올려봐욤",
+                                "갤럭시로 갈아탈라고 올림 아이폰 안씀"]
+        let subtitles: [String] = ["조원동", "흑석동", "영통", "청라", "제주도", "지구 어딘가", "아 귀찮아", "어 그냥 어딘가 삼", "라스베이거스", "동굴속"]
+        let prices: [String] = ["10,000,000원", "20,000원", "25,000원", "123,123,123,123원", "0원", "460,000원", "135,000원", "210,000원","123원","131,000,000,000원"]
+        let count = images.count
+        for i in 0..<count{
+            let item = Item(image: images[i], title: titles[i], subtitle: subtitles[i], price: prices[i])
+            items.append(item)
         }
     }
     
@@ -161,15 +158,14 @@ class ViewController: UIViewController{
 
 extension ViewController : UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return saveImage.count
+        return items.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: CenterTableViewCell.identifier) as? CenterTableViewCell ?? CenterTableViewCell()
-        cell.configuration(leftImage: saveImage[indexPath.row], titleTxt: TitleText[indexPath.row], subTxt: subText[indexPath.row], priceTxt: price[indexPath.row])
-        
-        return cell
-    }
+     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+     let cell = tableView.dequeueReusableCell(withIdentifier: CenterTableViewCell.identifier) as? CenterTableViewCell ?? CenterTableViewCell()
+     cell.configuration(items[indexPath.row])
+     return cell
+     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 130
