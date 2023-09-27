@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4828BAD52AC307EB00C63B6F /* JJFloatingActionButton in Frameworks */ = {isa = PBXBuildFile; productRef = 4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */; };
 		488445FF2AC15F040002833E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488445FE2AC15F040002833E /* AppDelegate.swift */; };
 		488446012AC15F040002833E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488446002AC15F040002833E /* SceneDelegate.swift */; };
 		488446032AC15F040002833E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488446022AC15F040002833E /* ViewController.swift */; };
@@ -28,6 +27,7 @@
 		48CD54B22AC346BB003A16F2 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A82AC346BB003A16F2 /* 3.png */; };
 		48CD54B32AC346BB003A16F2 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A92AC346BB003A16F2 /* 5.png */; };
 		48CD54B42AC346BB003A16F2 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54AA2AC346BB003A16F2 /* 6.png */; };
+		48EA30B22AC3CF7000A8F4A4 /* JJFloatingActionButton in Frameworks */ = {isa = PBXBuildFile; productRef = 48EA30B12AC3CF7000A8F4A4 /* JJFloatingActionButton */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4828BAD52AC307EB00C63B6F /* JJFloatingActionButton in Frameworks */,
+				48EA30B22AC3CF7000A8F4A4 /* JJFloatingActionButton in Frameworks */,
 				48C58A882AC2EFB5009DE9E3 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,7 +136,7 @@
 			name = 2st;
 			packageProductDependencies = (
 				48C58A872AC2EFB5009DE9E3 /* SnapKit */,
-				4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */,
+				48EA30B12AC3CF7000A8F4A4 /* JJFloatingActionButton */,
 			);
 			productName = 2st;
 			productReference = 488445FB2AC15F040002833E /* 2st.app */;
@@ -168,7 +168,7 @@
 			mainGroup = 488445F22AC15F040002833E;
 			packageReferences = (
 				48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */,
-				4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */,
+				48EA30B02AC3CF7000A8F4A4 /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */,
 			);
 			productRefGroup = 488445FC2AC15F040002833E /* Products */;
 			projectDirPath = "";
@@ -420,14 +420,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/jjochen/JJFloatingActionButton";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -436,18 +428,26 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		48EA30B02AC3CF7000A8F4A4 /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/jjochen/JJFloatingActionButton";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		4828BAD42AC307EB00C63B6F /* JJFloatingActionButton */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4828BAD32AC307EB00C63B6F /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */;
-			productName = JJFloatingActionButton;
-		};
 		48C58A872AC2EFB5009DE9E3 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 48C58A862AC2EFB5009DE9E3 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		48EA30B12AC3CF7000A8F4A4 /* JJFloatingActionButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 48EA30B02AC3CF7000A8F4A4 /* XCRemoteSwiftPackageReference "JJFloatingActionButton" */;
+			productName = JJFloatingActionButton;
 		};
 /* End XCSwiftPackageProductDependency section */
 
