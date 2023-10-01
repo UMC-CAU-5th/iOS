@@ -5,6 +5,7 @@
 //  Created by 정의찬 on 10/1/23.
 //
 
+import Foundation
 import UIKit
 import SnapKit
 
@@ -58,9 +59,9 @@ class AdverCollectionViewCell: UICollectionViewCell {
         [image, titleLabel, priceLabel].forEach{ self.addSubview($0) }
         
         image.snp.makeConstraints{ (make) -> Void in
-            make.top.equalToSuperview().offset(10)
+            make.top.equalToSuperview().offset(5)
             make.centerX.equalToSuperview()
-            make.width.height.lessThanOrEqualTo(130)
+            make.width.height.lessThanOrEqualTo(100)
         }
         
         titleLabel.snp.makeConstraints{ (make) -> Void in
@@ -76,9 +77,12 @@ class AdverCollectionViewCell: UICollectionViewCell {
         }
     }
     
-    func makeData(adver: AdverList){
+    func makeData(_ adver: AdverList){
         image.image = adver.image
-        titleLabel.text = adver.title ?? ""
-        priceLabel.text = adver.Price ?? ""
+        titleLabel.text = adver.title
+        priceLabel.text = adver.Price
+    }
+    func prin(){
+        print("hello")
     }
 }

@@ -88,9 +88,8 @@ class CenterTableViewCell: UITableViewCell {
     /// MARK: 광고 제목
     private lazy var adverTitleText: UILabel = {
         let text = UILabel()
-        text.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-        text.numberOfLines = 0
-        text.lineBreakMode = .byCharWrapping
+        text.font = UIFont.systemFont(ofSize: 20, weight: .bold)
+        text.textColor = .black
         return text
     }()
     
@@ -98,12 +97,13 @@ class CenterTableViewCell: UITableViewCell {
     private lazy var adverCollectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        
         let collection = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collection.dataSource = self
+        collection.delegate = self
+        collection.register(AdverCollectionViewCell.self, forCellWithReuseIdentifier: AdverCollectionViewCell.identifier)
+        collection.showsHorizontalScrollIndicator = false
         return collection
     }()
-    
-    
     
     // MARK: - init
     
@@ -147,32 +147,26 @@ class CenterTableViewCell: UITableViewCell {
         }
     }
     
-    private func adverMakeConstraints(){
-        adverTitleText.snp.makeConstraints{ (make) -> Void in
-            make.top.equalToSuperview().offset(10)
-            make.left.equalToSuperview().offset(10)
-            make.width.greaterThanOrEqualTo(60)
-        }
-        
-        adverCollectionView.snp.makeConstraints{ (make) -> Void in
-            make.top.equalTo(adverTitleText.snp.bottom).offset(10)
-            make.right.equalToSuperview().offset(-10)
-            make.bottom.equalToSuperview().offset(-10)
-            make.height.equalTo(180)
-        }
-    }
-    
     // MARK: - Function
     
     private func adverView(){
         [tableImage, titleText, subTitleText, price, rightStack].forEach{ $0.removeFromSuperview() }
-        [adverTitleText, adverCollectionView].forEach{ self.addSubview($0) }
-    
-        adverCollectionView.dataSource = self
-        adverCollectionView.delegate = self
-        adverCollectionView.register(AdverCollectionViewCell.self, forCellWithReuseIdentifier: AdverCollectionViewCell.identifier)
+        [adverTitleText].forEach{ addSubview($0) }
+         
+        self.addSubview(adverCollectionView)
         
-        adverMakeConstraints()
+        adverTitleText.snp.makeConstraints{ (make) -> Void in
+            make.top.equalToSuperview().offset(10)
+            make.left.equalToSuperview().offset(10)
+        }
+        
+        adverCollectionView.snp.makeConstraints{ (make) -> Void in
+            make.top.equalTo(adverTitleText.snp.bottom).offset(1)
+            make.left.equalToSuperview().offset(12)
+            make.right.equalToSuperview().offset(-12)
+            make.bottom.equalToSuperview().offset(-12)
+            make.height.lessThanOrEqualTo(200)
+        }
     }
     
     private func productView(){
@@ -203,31 +197,30 @@ class CenterTableViewCell: UITableViewCell {
         }
     }
     
-    public func adverConfiguration(adver: Adver){
-        adverList = adver.list
+    public func adverConfiguration(_ adver: Adver){
         adverView()
+        adverList = adver.list
         adverCollectionView.reloadData()
-        titleText.text = adver.title ?? ""
+        adverTitleText.text = adver.title ?? ""
     }
 
 }
 
 
 extension CenterTableViewCell : UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return adverList.count
-    }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdverCollectionViewCell.identifier, for: indexPath) as? AdverCollectionViewCell else{
-            return UICollectionViewCell()
-        }
-        cell.makeData(adver: adverList[indexPath.item])
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AdverCollectionViewCell.identifier, for: indexPath) as? AdverCollectionViewCell else { return UICollectionViewCell() }
+        cell.makeData(adverList[indexPath.item])
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return adverList.count
+        
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 180, height: 180)
+        return CGSize(width: 100, height: 100)
     }
 }
 

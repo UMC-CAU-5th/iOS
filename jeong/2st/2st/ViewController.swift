@@ -112,6 +112,7 @@ class ViewController: UIViewController{
             }
         }
         self.randomIdx = randomIdx
+        print(randomIdx)
     }
     
     
@@ -176,10 +177,10 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
-        var check: Bool = true
+        var notCollection: Bool = true
         let _ = randomIdx.filter{$0 == indexPath.row}.map{_ in
-            check = false
-            cell.adverConfiguration(adver: tableInfor.adverList[adsIdx])
+            notCollection = false
+            cell.adverConfiguration(tableInfor.adverList[adsIdx])
             if adsIdx < (tableInfor.adverList.count - 1){
                 adsIdx += 1
             }
@@ -188,7 +189,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
             }
         }
         
-        if check{
+        if notCollection{
             cell.productConfiguration(tableInfor.ItemList[ProductIdx])
             if ProductIdx < (tableInfor.ItemList.count - 1){
                 ProductIdx += 1
