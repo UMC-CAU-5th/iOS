@@ -29,6 +29,7 @@
 		48CD54B32AC346BB003A16F2 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54A92AC346BB003A16F2 /* 5.png */; };
 		48CD54B42AC346BB003A16F2 /* 6.png in Resources */ = {isa = PBXBuildFile; fileRef = 48CD54AA2AC346BB003A16F2 /* 6.png */; };
 		48EA30B22AC3CF7000A8F4A4 /* JJFloatingActionButton in Frameworks */ = {isa = PBXBuildFile; productRef = 48EA30B12AC3CF7000A8F4A4 /* JJFloatingActionButton */; };
+		48FC49AB2AC9435B00C69902 /* AdverCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48FC49AA2AC9435B00C69902 /* AdverCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		48CD54A82AC346BB003A16F2 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		48CD54A92AC346BB003A16F2 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
 		48CD54AA2AC346BB003A16F2 /* 6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 6.png; sourceTree = "<group>"; };
+		48FC49AA2AC9435B00C69902 /* AdverCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdverCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				48C58A842AC2EF9B009DE9E3 /* TopStatusView.swift */,
 				48C58A8B2AC2FC2C009DE9E3 /* BottomTabBar.swift */,
 				48CD549E2AC33573003A16F2 /* CenterTableViewCell.swift */,
+				48FC49AA2AC9435B00C69902 /* AdverCollectionViewCell.swift */,
 				48AA840F2AC3E78800CD1522 /* TableModel.swift */,
 				4884460A2AC15F060002833E /* Assets.xcassets */,
 				4884460C2AC15F060002833E /* LaunchScreen.storyboard */,
@@ -210,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48CD549F2AC33573003A16F2 /* CenterTableViewCell.swift in Sources */,
+				48FC49AB2AC9435B00C69902 /* AdverCollectionViewCell.swift in Sources */,
 				48AA84102AC3E78800CD1522 /* TableModel.swift in Sources */,
 				48C58A8C2AC2FC2C009DE9E3 /* BottomTabBar.swift in Sources */,
 				48C58A852AC2EF9B009DE9E3 /* TopStatusView.swift in Sources */,
