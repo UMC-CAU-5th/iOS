@@ -48,15 +48,17 @@ final class tableInfor {
             AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
             AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
             AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원")
+            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
         ]),
         
         Adver(title: "왈왈왈 🐶🐶", list: [
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원"),
-            AdverList(image: UIImage(named: "6.png"), title: "멍멍", Price: "1억원")
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
+            AdverList(image: UIImage(named: "6.png"), title: "왈왈왈", Price: "1억원"),
         ])
     ]
 }
