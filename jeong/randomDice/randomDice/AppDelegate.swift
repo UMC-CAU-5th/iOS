@@ -1,9 +1,4 @@
-//
-//  AppDelegate.swift
-//  randomDice
-//
-//  Created by 정의찬 on 2023/09/26.
-//
+
 
 import UIKit
 import CoreData
