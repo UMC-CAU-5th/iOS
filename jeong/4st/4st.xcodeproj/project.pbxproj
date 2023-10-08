@@ -12,7 +12,8 @@
 		486264A52AD1759300D1A737 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486264A42AD1759300D1A737 /* ViewController.swift */; };
 		486264AA2AD1759400D1A737 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 486264A92AD1759400D1A737 /* Assets.xcassets */; };
 		486264B52AD1769400D1A737 /* NanumGothic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 486264B42AD1769400D1A737 /* NanumGothic.otf */; };
-		48A690942AD17C4A00B93671 /* CheckBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48A690932AD17C4A00B93671 /* CheckBtn.swift */; };
+		486A976F2AD2BA6400768EC5 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486A976E2AD2BA6400768EC5 /* SuccessViewController.swift */; };
+		4890810D2AD282A60078D0EA /* TopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4890810C2AD282A60078D0EA /* TopView.swift */; };
 		48A690962AD1876800B93671 /* NanumGothicBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 48A690952AD1876800B93671 /* NanumGothicBold.otf */; };
 		48A690992AD18D5D00B93671 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 48A690982AD18D5D00B93671 /* SnapKit */; };
 		48A6909B2AD18D5D00B93671 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 48A6909A2AD18D5D00B93671 /* SnapKit-Dynamic */; };
@@ -26,7 +27,8 @@
 		486264A92AD1759400D1A737 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		486264AE2AD1759400D1A737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		486264B42AD1769400D1A737 /* NanumGothic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothic.otf; sourceTree = "<group>"; };
-		48A690932AD17C4A00B93671 /* CheckBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckBtn.swift; sourceTree = "<group>"; };
+		486A976E2AD2BA6400768EC5 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
+		4890810C2AD282A60078D0EA /* TopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopView.swift; sourceTree = "<group>"; };
 		48A690952AD1876800B93671 /* NanumGothicBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NanumGothicBold.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,9 +69,10 @@
 				486264A02AD1759300D1A737 /* AppDelegate.swift */,
 				486264A22AD1759300D1A737 /* SceneDelegate.swift */,
 				486264A42AD1759300D1A737 /* ViewController.swift */,
+				4890810C2AD282A60078D0EA /* TopView.swift */,
+				486A976E2AD2BA6400768EC5 /* SuccessViewController.swift */,
 				486264A92AD1759400D1A737 /* Assets.xcassets */,
 				486264AE2AD1759400D1A737 /* Info.plist */,
-				48A690932AD17C4A00B93671 /* CheckBtn.swift */,
 			);
 			path = 4st;
 			sourceTree = "<group>";
@@ -154,8 +157,9 @@
 			files = (
 				486264A52AD1759300D1A737 /* ViewController.swift in Sources */,
 				486264A12AD1759300D1A737 /* AppDelegate.swift in Sources */,
+				4890810D2AD282A60078D0EA /* TopView.swift in Sources */,
+				486A976F2AD2BA6400768EC5 /* SuccessViewController.swift in Sources */,
 				486264A32AD1759300D1A737 /* SceneDelegate.swift in Sources */,
-				48A690942AD17C4A00B93671 /* CheckBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

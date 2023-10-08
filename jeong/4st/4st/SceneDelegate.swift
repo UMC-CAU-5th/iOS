@@ -14,10 +14,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windows = (scene as? UIWindowScene) else { return }
-        window = UIWindow(windowScene: windows)
-        let mainView = ViewController()
         
-        window?.rootViewController = mainView
+        let defaults = UserDefaults.standard
+        let isLogin = defaults.bool(forKey: "isAutoLogin")
+        
+        window = UIWindow(windowScene: windows)
+        
+        if isLogin {
+            let mainView = SuccessViewController()
+            window?.rootViewController = mainView
+        } else{
+            let mainView = ViewController()
+            window?.rootViewController = mainView
+        
+        }
         window?.makeKeyAndVisible()
     }
 
