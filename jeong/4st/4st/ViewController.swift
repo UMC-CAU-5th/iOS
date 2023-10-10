@@ -41,6 +41,7 @@ class ViewController: UIViewController {
         text.layer.borderWidth = 1
         return text
     }()
+    
     ///MARK: - 비밀번호 입력 테스트 박스
     private lazy var pwdtextField: UITextField = {
         let text = UITextField()
@@ -107,12 +108,14 @@ class ViewController: UIViewController {
         
         return loginBtn
     }()
+    
     ///MARK: - 구분선
     private lazy var stackLine: UIView = {
         let line = UIView()
         line.backgroundColor = UIColor.black
         return line
     }()
+    
     ///MARK: - 체크 박스 버튼 스택
     private lazy var btnStack: UIStackView = {
         let stack = UIStackView()
@@ -272,6 +275,7 @@ class ViewController: UIViewController {
         nextView()
     
     }
+    
     @objc func clickedBtn(){
         loginBtn.backgroundColor = UIColor.systemBlue
     }
