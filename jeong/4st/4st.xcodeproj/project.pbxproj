@@ -69,8 +69,8 @@
 				486264A02AD1759300D1A737 /* AppDelegate.swift */,
 				486264A22AD1759300D1A737 /* SceneDelegate.swift */,
 				486264A42AD1759300D1A737 /* ViewController.swift */,
-				4890810C2AD282A60078D0EA /* TopView.swift */,
 				486A976E2AD2BA6400768EC5 /* SuccessViewController.swift */,
+				4890810C2AD282A60078D0EA /* TopView.swift */,
 				486264A92AD1759400D1A737 /* Assets.xcassets */,
 				486264AE2AD1759400D1A737 /* Info.plist */,
 			);
