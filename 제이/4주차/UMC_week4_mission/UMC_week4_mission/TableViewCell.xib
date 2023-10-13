@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="TableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="112" id="KGk-i7-Jjw" customClass="TableViewCell" customModule="UMC_week4_mission" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="385" height="112"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="385" height="112"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="images" translatesAutoresizingMaskIntoConstraints="NO" id="6SD-bh-fVj">
+                        <rect key="frame" x="10" y="10" width="92" height="92"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="6SD-bh-fVj" secondAttribute="height" multiplier="91:91" id="WhK-DY-Y5a"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="에어팟프로맥스" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EUy-4m-O4W">
+                        <rect key="frame" x="112" y="9.9999999999999982" width="97" height="20.333333333333329"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="600000원" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8uu-zx-Wp6">
+                        <rect key="frame" x="112" y="54.333333333333343" width="82" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="동작구 대방동" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="igk-zD-aqd">
+                        <rect key="frame" x="112" y="35.333333333333336" width="66" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="igk-zD-aqd" firstAttribute="top" secondItem="EUy-4m-O4W" secondAttribute="bottom" constant="5" id="Ed0-U5-ujn"/>
+                    <constraint firstItem="EUy-4m-O4W" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="K3t-TF-dAl"/>
+                    <constraint firstItem="8uu-zx-Wp6" firstAttribute="leading" secondItem="6SD-bh-fVj" secondAttribute="trailing" constant="10" id="Rmk-VN-5tb"/>
+                    <constraint firstAttribute="bottom" secondItem="6SD-bh-fVj" secondAttribute="bottom" constant="10" id="c1E-1R-VZg"/>
+                    <constraint firstItem="EUy-4m-O4W" firstAttribute="leading" secondItem="6SD-bh-fVj" secondAttribute="trailing" constant="10" id="j17-a7-2bB"/>
+                    <constraint firstItem="8uu-zx-Wp6" firstAttribute="top" secondItem="igk-zD-aqd" secondAttribute="bottom" constant="4" id="jxP-J2-OHh"/>
+                    <constraint firstItem="igk-zD-aqd" firstAttribute="leading" secondItem="6SD-bh-fVj" secondAttribute="trailing" constant="10" id="ptA-Jw-r6A"/>
+                    <constraint firstItem="6SD-bh-fVj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="w0Z-kT-7EX"/>
+                    <constraint firstItem="6SD-bh-fVj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="xra-hP-Aja"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="placeLabel" destination="igk-zD-aqd" id="YCx-db-God"/>
+                <outlet property="priceLabel" destination="8uu-zx-Wp6" id="wJG-Tg-a6N"/>
+                <outlet property="productImageView" destination="6SD-bh-fVj" id="TRD-9o-Gfc"/>
+                <outlet property="titleLable" destination="EUy-4m-O4W" id="XYK-sh-zGd"/>
+            </connections>
+            <point key="canvasLocation" x="194.6564885496183" y="34.507042253521128"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="images" width="130" height="130"/>
+    </resources>
+</document>
