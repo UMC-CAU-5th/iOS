@@ -39,7 +39,7 @@
         <!--home-->
         <scene sceneID="izr-te-cuE">
             <objects>
-                <viewController id="ADq-Xz-cf8" sceneMemberID="viewController">
+                <viewController id="ADq-Xz-cf8" customClass="HomeViewController" customModule="_weekM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="492-pR-ebI">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -96,16 +96,27 @@
                                     <constraint firstItem="2ep-ds-pe6" firstAttribute="centerY" secondItem="myN-2d-0VG" secondAttribute="centerY" id="z3c-2X-dYl"/>
                                 </constraints>
                             </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dWq-yc-w3p">
+                                <rect key="frame" x="0.0" y="129" width="393" height="640"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hms-Jz-9BI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="hms-Jz-9BI" firstAttribute="bottom" secondItem="dWq-yc-w3p" secondAttribute="bottom" id="7Wa-70-way"/>
+                            <constraint firstItem="dWq-yc-w3p" firstAttribute="leading" secondItem="hms-Jz-9BI" secondAttribute="leading" id="8Uh-1B-QZ1"/>
                             <constraint firstItem="myN-2d-0VG" firstAttribute="leading" secondItem="hms-Jz-9BI" secondAttribute="leading" id="Bg1-Hv-laf"/>
                             <constraint firstItem="hms-Jz-9BI" firstAttribute="trailing" secondItem="myN-2d-0VG" secondAttribute="trailing" id="MQx-8M-Oa6"/>
+                            <constraint firstItem="hms-Jz-9BI" firstAttribute="trailing" secondItem="dWq-yc-w3p" secondAttribute="trailing" id="hVY-Un-dkZ"/>
                             <constraint firstItem="myN-2d-0VG" firstAttribute="top" secondItem="hms-Jz-9BI" secondAttribute="top" id="sWy-C5-kmu"/>
+                            <constraint firstItem="dWq-yc-w3p" firstAttribute="top" secondItem="myN-2d-0VG" secondAttribute="bottom" id="yhD-Zv-wAe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="home" id="1He-iS-Iq3"/>
+                    <connections>
+                        <outlet property="tableView" destination="dWq-yc-w3p" id="iyb-8Z-vv7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rtl-vz-Eid" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
