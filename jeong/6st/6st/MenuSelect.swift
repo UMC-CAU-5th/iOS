@@ -29,17 +29,17 @@ struct MenuSelect: View {
                 HStack(spacing:20){
                     Spacer()
                     MakeBtn(imgText: "bossam", imgName: "보쌈")
-                    MakeBtn(imgText: "chicken", imgName: "치킨")
-                    MakeBtn(imgText: "pizza", imgName: "피자")
-                    MakeBtn(imgText: "ham", imgName: "햄버거")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
                     Spacer()
                 }
                 HStack(spacing:20){
                     Spacer()
-                    MakeBtn(imgText: "icecream", imgName: "아이스크림")
-                    MakeBtn(imgText: "dduck", imgName: "떡볶이")
-                    MakeBtn(imgText: "sushi", imgName: "회")
-                    MakeBtn(imgText: "ham", imgName: "햄버거")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
+                    MakeBtn(imgText: "bossam", imgName: "보쌈")
                     Spacer()
                 }
             }.frame(height: 140)
