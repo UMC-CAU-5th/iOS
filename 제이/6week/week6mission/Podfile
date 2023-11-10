@@ -1,0 +1,21 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'week6mission' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for week6mission
+  pod 'lottie-ios'
+  pod 'Hero'
+ 
+  target 'week6missionTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'week6missionUITests' do
+    # Pods for testing
+  end
+
+end

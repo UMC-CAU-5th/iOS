@@ -80,6 +80,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 60
     }
 
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
+    }
     
 
     override func viewDidLoad() {
@@ -87,6 +90,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.menuName.text = menu_name
         tableView.dataSource=self
         tableView.delegate=self
+        tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
     }
 
