@@ -19,8 +19,6 @@
 		F43E50212AF2D99E00DE45BA /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E50202AF2D99E00DE45BA /* TableViewCell.swift */; };
 		F43E50232AF37F5400DE45BA /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E50222AF37F5400DE45BA /* CartViewController.swift */; };
 		F43E50612AF49B2500DE45BA /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F43E50602AF49B2500DE45BA /* CartTableViewCell.swift */; };
-		F45782B52AF94D92003E8E98 /* ToppingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45782B32AF94D92003E8E98 /* ToppingTableViewCell.swift */; };
-		F45782B62AF94D92003E8E98 /* ToppingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F45782B42AF94D92003E8E98 /* ToppingTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +55,6 @@
 		F43E50202AF2D99E00DE45BA /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		F43E50222AF37F5400DE45BA /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
 		F43E50602AF49B2500DE45BA /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
-		F45782B32AF94D92003E8E98 /* ToppingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToppingTableViewCell.swift; sourceTree = "<group>"; };
-		F45782B42AF94D92003E8E98 /* ToppingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToppingTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +115,6 @@
 				F43E50202AF2D99E00DE45BA /* TableViewCell.swift */,
 				F43E50222AF37F5400DE45BA /* CartViewController.swift */,
 				F43E50602AF49B2500DE45BA /* CartTableViewCell.swift */,
-				F45782B32AF94D92003E8E98 /* ToppingTableViewCell.swift */,
-				F45782B42AF94D92003E8E98 /* ToppingTableViewCell.xib */,
 			);
 			path = week5_mission;
 			sourceTree = "<group>";
@@ -247,7 +241,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				F43E4F432AF2A17700DE45BA /* LaunchScreen.storyboard in Resources */,
-				F45782B62AF94D92003E8E98 /* ToppingTableViewCell.xib in Resources */,
 				F43E4F402AF2A17700DE45BA /* Assets.xcassets in Resources */,
 				F43E4F3E2AF2A17500DE45BA /* Main.storyboard in Resources */,
 			);
@@ -274,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F45782B52AF94D92003E8E98 /* ToppingTableViewCell.swift in Sources */,
 				F43E4F3B2AF2A17500DE45BA /* ViewController.swift in Sources */,
 				F43E50212AF2D99E00DE45BA /* TableViewCell.swift in Sources */,
 				F43E50232AF37F5400DE45BA /* CartViewController.swift in Sources */,

@@ -11,13 +11,16 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var selectedOnlyOne: Int? //nil사용하기 때문에 옵셔널로
+    var selectedOnlyOne: Int? //nil
     var selected: Int = 0
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var menuName: UILabel!
+    @IBOutlet weak var tableView2: UITableView!
+    
+    
     /*
-    @IBAction func cartAction(_ sender: UIButton) {
+     @IBAction func cartAction(_ sender: UIButton) {
         performSegue(withIdentifier: "showCart", sender: sender)
     }
     */
@@ -25,27 +28,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     let menu_name = "[재주문1위] 콤비네이션 피자"
     let size_arr = ["M", "L"]
     let price_arr = ["20000원","30000원"]
+    let topping_arr = ["파인애플", "피망"]
+    
     
     
     //행의 갯수
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return size_arr.count
+
     }
     
     //cell data
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sizeCell", for: indexPath) as! TableViewCell
-        cell.sizeLabel.text = size_arr[indexPath.row]
-        cell.priceLabel.text = price_arr[indexPath.row]
-        cell.selectButton.tag = indexPath.row
-        cell.selectButton.addTarget(self, action: #selector(sendData(sender:)), for: .touchUpInside)
-        
-        return cell
+
+            cell.sizeLabel.text = size_arr[indexPath.row]
+            cell.priceLabel.text = price_arr[indexPath.row]
+            cell.selectButton.tag = indexPath.row
+            cell.selectButton.addTarget(self, action: #selector(sendData(sender:)), for: .touchUpInside)
+            
+            return cell
+
     }
     
     
     @objc func sendData(sender: UIButton) {
-        print("\(sender.tag) 버튼의 Tag로 index값을 받아서 데이터 처리")
         if selectedOnlyOne != nil{
             if !sender.isSelected{ //새로운 버튼을 누를때
                 sender.isSelected = false
@@ -69,7 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.destination is CartViewController {
                     guard let vc = segue.destination as? CartViewController else { return }
-                    vc.flag = selected
+                    vc.flag.append(selected)
                     vc.menu = menu_name
                 }
     }
@@ -88,8 +95,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         self.menuName.text = menu_name
-        tableView.dataSource=self
-        tableView.delegate=self
+        tableView.dataSource = self
+        tableView.delegate = self
         tableView.separatorStyle = .none
         // Do any additional setup after loading the view.
     }

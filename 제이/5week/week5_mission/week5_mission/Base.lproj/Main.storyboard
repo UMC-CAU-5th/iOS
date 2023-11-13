@@ -143,10 +143,6 @@
                                     <constraint firstAttribute="height" constant="60" id="4eQ-sc-jXP"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="r9Z-K8-tzD">
-                                <rect key="frame" x="0.0" y="671" width="393" height="91"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
@@ -157,11 +153,9 @@
                             <constraint firstItem="GTu-r1-I93" firstAttribute="top" secondItem="5hq-FG-rdV" secondAttribute="bottom" id="H5n-b0-Dei"/>
                             <constraint firstItem="hpD-fF-shB" firstAttribute="top" secondItem="s2t-yD-yLY" secondAttribute="bottom" id="LZg-WQ-gB4"/>
                             <constraint firstItem="s2t-yD-yLY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="S6S-tV-uDh"/>
-                            <constraint firstItem="r9Z-K8-tzD" firstAttribute="top" secondItem="Bfu-bK-wb5" secondAttribute="bottom" id="TxG-9L-Z4V"/>
                             <constraint firstItem="LT7-zq-2he" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="UBa-th-rZI"/>
                             <constraint firstItem="hpD-fF-shB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VEH-bh-qKi"/>
                             <constraint firstItem="s2t-yD-yLY" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.294601" id="ZyQ-kM-LUV"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="r9Z-K8-tzD" secondAttribute="trailing" id="aRz-Qs-Qxs"/>
                             <constraint firstItem="Bfu-bK-wb5" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bTG-NT-PBB"/>
                             <constraint firstItem="s2t-yD-yLY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="d5w-xs-0dG"/>
                             <constraint firstItem="5hq-FG-rdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dl4-OT-3oV"/>
@@ -171,9 +165,7 @@
                             <constraint firstItem="5hq-FG-rdV" firstAttribute="top" secondItem="hpD-fF-shB" secondAttribute="bottom" constant="20" id="foA-1H-cak"/>
                             <constraint firstItem="GTu-r1-I93" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mCL-ss-lHq"/>
                             <constraint firstItem="5hq-FG-rdV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oQj-Th-FUt"/>
-                            <constraint firstItem="r9Z-K8-tzD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="p5h-MZ-OCu"/>
                             <constraint firstItem="s2t-yD-yLY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tox-GK-hPH"/>
-                            <constraint firstItem="LT7-zq-2he" firstAttribute="top" secondItem="r9Z-K8-tzD" secondAttribute="bottom" constant="10" id="xYQ-Cg-JRZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="L1h-0K-5Lg"/>
