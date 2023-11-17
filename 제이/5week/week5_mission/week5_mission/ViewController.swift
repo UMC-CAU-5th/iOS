@@ -19,11 +19,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView2: UITableView!
     
     
-    /*
-     @IBAction func cartAction(_ sender: UIButton) {
-        performSegue(withIdentifier: "showCart", sender: sender)
-    }
-    */
     
     let menu_name = "[재주문1위] 콤비네이션 피자"
     let size_arr = ["M", "L"]
