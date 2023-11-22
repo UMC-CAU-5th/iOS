@@ -13,12 +13,10 @@ struct MakeBtn: View {
     
     var body: some View{
         VStack{
-            ZStack{
                 Color.white
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
                     Image(imgText)
                 })
-            }
             .clipShape(Circle())
             Text(imgName)
                 .font(.caption)

@@ -14,7 +14,7 @@ struct SearchView: View {
             Color(red: 0.30, green: 0.78, blue: 0.89, opacity: 1.00)
             VStack{
                 HStack{
-                    Text("동작구 어딘가")
+                    Text("지구 대한민국 서울시 어딘가")
                         .font(.title2)
                         .foregroundStyle(.black)
                         .offset(CGSize(width: 20, height: 0))
@@ -24,15 +24,18 @@ struct SearchView: View {
                         Image(systemName: "square.grid.2x2")
                     })
                     .offset(CGSize(width: -20, height: 0))
+                    .foregroundStyle(.white)
                             
                     Button(action: {print("clickTwo")}, label: {Image(systemName: "bell")
                     })
                     .offset(CGSize(width: -20, height: 0))
+                    .foregroundStyle(.white)
                     
                     Button(action: {print("clickThree")}, label: {
                         Image(systemName: "cart")
                     })
                     .offset(CGSize(width: -20, height: 0))
+                    .foregroundStyle(.white)
                 }
                 SearchBar(text: $SearchText)
                     .padding(EdgeInsets(top: 0, leading: 10, bottom: 10, trailing: 0))
@@ -59,7 +62,7 @@ struct SearchBar: View{
                 
                 if !text.isEmpty{
                     Button(action: {self.text = ""}){
-                        Image(systemName: "xamrk.circle.fill")
+                        Image(systemName: "xmark.circle.fill")
                     }
                 } else {
                     EmptyView()
