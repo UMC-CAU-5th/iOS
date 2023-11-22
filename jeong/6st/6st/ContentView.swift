@@ -20,6 +20,10 @@ struct ContentView: View {
                     Image("heart")
                     Text("찜")
                 }
+            Text("center")
+                .tabItem{
+                    Image("mark")
+                }
             Text("3333")
                 .tabItem{
                     Image("word")

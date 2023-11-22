@@ -31,4 +31,4 @@ struct FetchWeather{
         }
         
     }
-}
+}q
