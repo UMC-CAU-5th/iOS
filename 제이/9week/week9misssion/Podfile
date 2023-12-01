@@ -1,0 +1,20 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'week9misssion' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for week9misssion
+    pod 'Alamofire'
+
+  target 'week9misssionTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'week9misssionUITests' do
+    # Pods for testing
+  end
+
+end
